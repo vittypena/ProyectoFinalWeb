@@ -2,19 +2,27 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { EstadisticasUsuarioComponent } from './heroe/estadisticas-usuario/estadisticas-usuario.component';
+import { UserLoggedGuard } from './guards/user-logged-guard';
 
-const routes: Routes = [
+const routes: Routes = [  
+  {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full'
+  },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
   {
     path: 'personajes',
-    loadChildren: () => import('./personajes/personajes.module').then( m => m.PersonajesModule )
+    loadChildren: () => import('./personajes/personajes.module').then( m => m.PersonajesModule ),
+    canActivate: [UserLoggedGuard]
   },
   {
     path: 'estadisticas',
-    component: EstadisticasUsuarioComponent
+    component: EstadisticasUsuarioComponent,
+    canActivate: [UserLoggedGuard]
   },
   {
     path: '404',

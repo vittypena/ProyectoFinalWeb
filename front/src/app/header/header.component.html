@@ -18,12 +18,8 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
-      <a  class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-        routerLink="/auth/login" routerLinkActive="active">
-        Login
-      </a>
       <a  class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 "
-        routerLink="/auth/registro" routerLinkActive="active">
+        routerLink="/auth/registro" routerLinkActive="active" *ngIf="!usuario?.validado">
         Registro
       </a>
       <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 "

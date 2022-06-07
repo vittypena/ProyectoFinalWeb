@@ -9,14 +9,15 @@
           />
         </div>
         <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-          <form>
+          <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
             <!-- Email input -->
             <div class="mb-6">
               <input
                 type="text"
                 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 placeholder="Dirección de correo"
-              />
+                formControlName="email"
+              />              
             </div>
   
             <!-- Password input -->
@@ -25,6 +26,7 @@
                 type="password"
                 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 placeholder="Contraseña"
+                formControlName="password"
               />
             </div>
   
@@ -61,3 +63,19 @@
       </div>
     </div>
   </section>
+
+ <!-- <div class="row ml-1">
+    <div class="clo">
+        <span>Valid</span>
+        <pre>{{ miFormulario.valid }}</pre>
+
+        <span>Pristine</span>
+        <pre>{{ miFormulario.pristine }}</pre>
+
+        <span>Touched</span>
+        <pre>{{ miFormulario.touched }}</pre>
+
+        <span>Value</span>
+        <pre>{{ miFormulario.value | json }}</pre>
+    </div>
+</div>  -->

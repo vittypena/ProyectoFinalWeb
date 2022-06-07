@@ -3,6 +3,7 @@ export interface Customer {
     country:                      string;
     address:                      string;
     zipCode:                      string;
+    email:                        string;
     numeroMuertes:                number;
     enemigosFantasmaDerrotados:   number;
     enemigosEsqueletosDerrotados: number;
@@ -12,3 +13,4 @@ export interface Customer {
     nivelSecreto:                 boolean;
     fullName:                     string;
 }
+

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { User } from '../interfaces/user-model';
+import { AuthService } from '../services/authService';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit{  
+  usuario: User ={
+    email:"",
+    fullName:"",
+    validado: false
+};
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(
+    private _authService: AuthService
+  ) { }
+
+  ngOnInit(): void {    
   }
-
+  
 }

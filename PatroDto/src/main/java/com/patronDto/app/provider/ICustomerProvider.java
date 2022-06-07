@@ -11,4 +11,5 @@ public interface ICustomerProvider {
 	Optional<CustomerEntity> findById(Long id);
 	AddressEntity findAddressByCostumer(CustomerEntity customerEntity);
 	PartidaEntity findPartidaByCostumer(CustomerEntity customerEntity);
+	CustomerEntity findByEmail(String email);
 }

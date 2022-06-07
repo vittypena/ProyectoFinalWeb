@@ -39,5 +39,10 @@ public class CustomerProviderImpl implements ICustomerProvider {
 	@Override
 	public PartidaEntity findPartidaByCostumer(CustomerEntity customerEntity) {
 		return partidaRepository.findByCustomer(customerEntity);
+	}
+
+	@Override
+	public CustomerEntity findByEmail(String email) {		
+		return customerRepository.findByEmail(email);
 	}		
 }

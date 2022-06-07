@@ -17,6 +17,7 @@ public class CustomerDTO implements Serializable {
 	private String country;
 	private String address;
 	private String zipCode;
+	private String email;
 	private Integer numeroMuertes;
 	private Integer enemigosFantasmaDerrotados;
 	private Integer enemigosEsqueletosDerrotados;

@@ -10,19 +10,19 @@
                     <ul class="grid grid-cols-2 sm:grid-cols-6 gap-4">
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Nombre Completo
-                            <dd class="text-base text-black">{{ "" | titlecase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.fullName | titlecase }}</dd>
                         </li>                        
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Dirección
-                            <dd class="text-base text-black">{{ '' }}</dd>
+                            <dd class="text-base text-black">{{ customer?.address |titlecase }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Codigo Postal
-                            <dd class="text-base text-black">{{ "" | uppercase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.zipCode }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             País
-                            <dd class="text-base text-black">{{ "" | titlecase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.country | titlecase }}</dd>
                         </li>
                     </ul>
                 </div>
@@ -43,31 +43,31 @@
                     <ul class="grid grid-cols-2 sm:grid-cols-6 gap-4">
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Numero de muertes
-                            <dd class="text-base text-black">{{ "" | titlecase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.numeroMuertes}}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Fantasmas Derrotados
-                            <dd class="text-base text-black">{{ "" | titlecase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.enemigosFantasmaDerrotados }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Esqueletos Derrotados
-                            <dd class="text-base text-black">{{ "" | titlecase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.enemigosEsqueletosDerrotados }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Bestias Derrotadas
-                            <dd class="text-base text-black">{{ '' }}</dd>
+                            <dd class="text-base text-black">{{ customer?.enemigosBestiaDerrotados }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Sephirots Derrotados
-                            <dd class="text-base text-black">{{ "" | uppercase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.bossFinalDerrotados }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Monedas Obtenidas
-                            <dd class="text-base text-black">{{ "" | uppercase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.monedasObtenidas }}</dd>
                         </li>
                         <li class="lg:inline-block text-sm text-neutral-dark">
                             Nivel Secreto Descubierto
-                            <dd class="text-base text-black">{{ "" | uppercase }}</dd>
+                            <dd class="text-base text-black">{{ customer?.nivelSecreto }}</dd>
                         </li>
                     </ul>
                 </div>
